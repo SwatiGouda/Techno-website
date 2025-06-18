@@ -1,0 +1,264 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.top-bar {
+    background-color: #00a9e0;
+    color: white;
+    padding: 10px 0;
+    padding-top: 50px;
+    text-align: start;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  }
+  
+  .top-bar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("your-graphic.svg"); /* Replace with your graphic */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.1;
+    z-index: -1;
+    filter: blur(2px); /* Add a blur effect to the background */
+  }
+  
+  .top-bar .contact-info {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .top-bar .contact-info li {
+    margin: 0 20px; /* Increased spacing */
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  .top-bar .contact-info li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .top-bar .contact-info li:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .top-bar .contact-info li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease; /* Add transition for all properties */
+  }
+  
+  .top-bar .contact-info li a:hover {
+    color: #00c6ff;
+    transform: translateY(-2px); /* Add a slight bounce effect */
+  }
+
+
+
+.social-icon {
+    display: inline-block;
+    margin: 0 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff; /* Initial white background */
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .social-icon i {
+    /* ... other styles ... */
+    position: absolute; /* Position the icon absolutely within the container */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the icon both vertically and horizontally */
+  }
+  .social-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    z-index: 1; /* Place it behind the icon */
+    transition: transform 0.3s ease;
+    opacity: 0; /* Initially hide the white circle */
+  }
+  
+  .social-icon:nth-child(1) { /* Facebook */
+    background: linear-gradient(45deg, #3b5998, #007bff);
+  }
+  
+  .social-icon:nth-child(2) { /* Twitter */
+    background: linear-gradient(45deg, #1DA1F2, #00c6ff);
+  }
+  
+  .social-icon:nth-child(3) { /* Instagram */
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366);
+  }
+  
+  .social-icon:nth-child(4) { /* LinkedIn */
+    background: linear-gradient(45deg, #0077B5, #00c6ff);
+  }
+  
+  .social-icon:nth-child(5) { /* YouTube */
+    background: linear-gradient(45deg, #FF0000, #FF7F00);
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.1) rotate(15deg);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+  }
+  
+  .social-icon:hover::before {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+  
+  .social-icon:hover i {
+    transform: rotate(360deg);
+    color: #fff;
+  }
+.navbar-content {
+    display: flex; /* Enable flexbox layout */
+    align-items: center; /* Vertically align items */
+    gap: 20px; /* Adjust the gap between items */
+}
+
+/* Add margin-right to the logo to create space */
+.navbar-content .navbar-brand {
+    margin-right: 20px;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 20px; /* Adjust the value as needed */
+  }
+
+.navbar-brand img {
+    height: 50px;
+}
+
+.nav-item .nav-link {
+    font-weight: bold;
+    color: black;
+}
+
+.navbar-nav .nav-link {
+    margin-left: 40px;
+}
+.navbar-nav .nav-item .nav-link:hover {
+    color:  #00bfff;
+}
+nav.navbar {
+    height: 90px;
+}
+
+.btn-primary, .btn-warning {
+    margin-left: 10px;
+    display: inline-block;
+    height: 40px; /* Reduced height */
+    width: 100px; /* Reduced width */
+    font-size: 0.9rem; /* Slightly smaller font size */
+    font-weight: bold;
+    border: none;
+    border-radius: 20px; /* Slightly less rounded corners */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background-image: linear-gradient(to right, #007bff, #00bfff); /* Blue gradient */
+    color: white;
+}
+
+.btn-warning {
+    background-image: linear-gradient(to right, #f39c12, #e74c3c); /* Orange to red gradient */
+    color: white;
+}
+
+.btn-primary:hover {
+    background-image: linear-gradient(to right, #00bfff, #007bff); /* Reverse gradient on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+}
+
+.btn-warning:hover {
+    background-image: linear-gradient(to right, #e74c3c, #f39c12); /* Reverse gradient on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+}
+
+.btn-warning {
+    margin-left: 10px;
+}
+
+.hero {
+    padding: 50px 0;
+}
+
+.hero h1 {
+    font-size: 2em;
+    line-height: 1.5;
+}
+
+.navbar-brand {
+    position: relative; /* To position the button relative to the logo */
+}
+
+.placement-btn {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    margin-left: 10px;
+    background-image: linear-gradient(to right, #007bff, #00bfff);
+    color: white;
+    border: 2px solid white; /* Add a white border */
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* ... rest of the styles ... */
+
+.placement-btn:hover {
+    background-image: linear-gradient(to right, #00bfff, #007bff); /* Reverse gradient on hover */
+    cursor: pointer;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.placement-btn:active {
+    transform: translateY(-50%) scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
